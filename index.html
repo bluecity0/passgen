@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator & Hasher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="toggle-theme" onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="container">
+        <h2>Password Generator & Hasher</h2>
+        
+        <div class="section">
+            <h3>Random Password Generator</h3>
+            <button onclick="generateRandomPassword()">Generate Random Password</button>
+            <div class="result">
+                <p id="randomPassword"></p>
+                <button onclick="copyToClipboard('randomPassword')">Copy</button>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>Password Hasher</h3>
+            <input type="password" id="passwordInput" placeholder="Enter password">
+            <button onclick="generateHash()">Generate Hash</button>
+            <div class="result">
+                <p id="hashedPassword"></p>
+                <button onclick="copyToClipboard('hashedPassword')">Copy</button>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>Hash Cracker</h3>
+            <input type="text" id="hashInput" placeholder="Enter Hash">
+            <button onclick="crackHash()">Crack Hash</button>
+            <p id="crackedPassword"></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
